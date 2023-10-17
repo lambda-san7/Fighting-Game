@@ -75,3 +75,13 @@ def events():
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             pygame.quit()
+
+##########################
+# UTILITIES
+##########################
+
+class center:
+    def x(parent_w,child_w):
+        return ((parent_w / 2) - (child_w / 2))
+    def y(parent_h,child_h):
+        return ((parent_h / 2) - (child_h / 2))
