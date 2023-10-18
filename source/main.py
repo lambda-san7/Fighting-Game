@@ -15,7 +15,7 @@ from defaults import window, tick, sprite, events, center
 while 1:
     tick()
     window.clear()
-    events()
+    events.update()
     sprite("line_of_duty.png").render(
         center.x(window.w(),100),
         center.y(window.h(),100),

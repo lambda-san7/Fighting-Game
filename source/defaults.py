@@ -67,14 +67,29 @@ class sprite:
 # EVENTS
 ##########################
 
-def events():
-    key_down = False
-    key_up = False
-    key_pressed = pygame.key.get_pressed
+class new_events:
+    def __init__(self):
+        self.key_down = None
+        self.key_up = None
+        self.key_press = pygame.key.get_pressed
 
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            pygame.quit()
+    def update(self):
+        self.key_down = None
+        self.key_up = None
+        self.key_press = pygame.key.get_pressed
+        self.mouse_down = None
+        self.mouse_up = None
+        self.mouse_press = pygame.mouse.get_pressed
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+            if event.type == pygame.KEYDOWN:
+                self.key_down = pygame.key.name(event.key)
+            if event.type == pygame.KEYUP:
+                self.key_up = pygame.key.name(event.key)
+
+events = new_events()
 
 ##########################
 # UTILITIES
