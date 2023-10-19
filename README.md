@@ -9,11 +9,13 @@ and structure of game development
 - Collision
 - Animations
 - Attacks
-- Scenes ie.
+- Scenes
     - Menu
     - Char Select
     - Map Select
-    - Game
+
 ### Done:
 ---
 - Efficient Image Rendering
+- Player Controller
+- Scene: Game
