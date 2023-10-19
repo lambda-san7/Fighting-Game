@@ -71,15 +71,15 @@ class new_events:
     def __init__(self):
         self.key_down = None
         self.key_up = None
-        self.key_press = pygame.key.get_pressed
+        self.key_press = pygame.key.get_pressed()
 
     def update(self):
         self.key_down = None
         self.key_up = None
-        self.key_press = pygame.key.get_pressed
+        self.key_press = pygame.key.get_pressed()
         self.mouse_down = None
         self.mouse_up = None
-        self.mouse_press = pygame.mouse.get_pressed
+        self.mouse_press = pygame.mouse.get_pressed()
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:

@@ -3,10 +3,16 @@
 ##########################
 
 from defaults import window, tick, sprite, events, center
+from character import michael
 
 ##########################
 # SCENES
 ##########################
+
+def game():
+    michael.handle()
+
+scene = game
 
 ##########################
 # GAME LOOP
@@ -16,10 +22,5 @@ while 1:
     tick()
     window.clear()
     events.update()
-    sprite("line_of_duty.png").render(
-        center.x(window.w(),100),
-        center.y(window.h(),100),
-        100,
-        100
-    )
+    scene()
     window.update()
