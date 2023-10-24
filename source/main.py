@@ -11,6 +11,7 @@ from character import michael
 
 def game():
     michael.handle()
+    sprite("line_of_duty.png").render(0, 400, window.w(), 400)
 
 scene = game
 
@@ -19,8 +20,7 @@ scene = game
 ##########################
 
 while 1:
-    tick()
-    window.clear()
     events.update()
     scene()
     window.update()
+    window.clear()

@@ -48,10 +48,12 @@ window = new_window(900,600,"Fighting Game")
 # TIME
 ##########################
 
+delta_time = 0
+
 clock = pygame.time.Clock()
 
 def tick():
-    clock.tick(60)
+    return clock.tick(60)
 
 ##########################
 # SPRITE
@@ -100,3 +102,10 @@ class center:
         return ((parent_w / 2) - (child_w / 2))
     def y(parent_h,child_h):
         return ((parent_h / 2) - (child_h / 2))
+    
+##########################
+# PHYSICS GLOBALS
+##########################
+
+friction = 5
+gravity = 10
